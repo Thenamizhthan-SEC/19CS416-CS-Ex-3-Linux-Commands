@@ -1,340 +1,309 @@
-# 19CS416-CS-Ex-3-Linux-Commands
+# Experiment No. 3 – Basic Linux Commands
+***KISHORE J***
+**- 212225240072**
+## Aim
 
-**Linux** is an open-source operating system, and its kernel is the heart of the OS, facilitating communication between hardware and software. One of the key advantages of Linux is its customizability; developers can modify the Linux kernel to create their own tailored operating systems.
+To install and configure Oracle VirtualBox, install Kali Linux, and execute basic Linux commands in a virtualized environment.
 
-## Linux Commands
+## Software Requirements
 
-Linux commands are executed in the terminal, which is case-sensitive. This guide covers some basic and advanced commands used in Linux.
+- Windows 10 or Windows 11
+- Oracle VirtualBox
+- Kali Linux ISO image
+- Minimum 8 GB RAM
+- Minimum 50 GB free storage space
 
-### 1. `ls` Command
+---
 
-The `ls` command is used to display a list of contents in a directory.
+# Part E – Executing Basic Linux Commands
 
-**Syntax:** 
-```bash
-ls
-```
+Linux commands are executed in the terminal. The following basic commands were executed in Kali Linux.
 
-**Output:**
+## 1. `pwd` Command
 
-### 2. `pwd` Command
+**Purpose:** Display the current directory.
 
-The `pwd` command displays the location of the current working directory.
+**Command:**
 
-**Syntax:**
 ```bash
 pwd
 ```
 
 **Output:**
 
-### 3. `mkdir` Command
+<!-- Attach screenshot here -->
 
-The `mkdir` command is used to create a new directory.
+<img width="827" height="172" alt="image" src="https://github.com/user-attachments/assets/f135acec-6028-45ee-a21a-b88300102fd2" />
 
-**Syntax:**
+
+
+---
+
+## 2. `ls` Command
+
+**Purpose:** Display files and folders.
+
+**Command:**
+
 ```bash
-mkdir <directory_name>
+ls
 ```
 
 **Output:**
 
-### 4. `rmdir` Command
+<!-- Attach screenshot here -->
 
-The `rmdir` command is used to delete a directory.
+<img width="822" height="57" alt="image" src="https://github.com/user-attachments/assets/a77aef8d-d8ad-4ef6-a585-99a0cb3a164b" />
 
-**Syntax:**
-```bash
-rmdir <directory_name>
-```
 
-**Output:**
+---
 
-### 5. `cd` Command
+## 3. `cd` Command
 
-The `cd` command is used to change the current directory.
+**Purpose:** Change the directory.
 
-**Syntax:**
+**Command:**
+
 ```bash
 cd <directory_name>
 ```
 
-**Output:**
+**Example:**
 
-### 6. `cat` Command
-
-The `cat` command is used to create, display, and concatenate files.
-
-**Syntax:**
 ```bash
-cat [OPTION]... [FILE]...
+cd cloudlab
 ```
 
 **Output:**
 
-### 7. `cp` Command
+<!-- Attach screenshot here -->
 
-The `cp` command is used to copy files or directories.
+<img width="827" height="117" alt="image" src="https://github.com/user-attachments/assets/2a5a8580-0230-4430-97da-2da7dbac546d" />
 
-**Syntax:**
+
+---
+
+## 4. `mkdir` Command
+
+**Purpose:** Create a new directory.
+
+**Command:**
+
+```bash
+mkdir <directory_name>
+```
+
+**Example:**
+
+```bash
+mkdir cloudlab
+```
+
+**Output:**
+
+<!-- Attach screenshot here -->
+
+<img width="828" height="177" alt="image" src="https://github.com/user-attachments/assets/f117f5c7-cb93-41f3-81f8-256663ceb53b" />
+
+---
+
+## 5. `rmdir` Command
+
+**Purpose:** Remove a directory.
+
+**Command:**
+
+```bash
+rmdir <directory_name>
+```
+
+**Example:**
+
+```bash
+rmdir cloudlab
+```
+
+**Output:**
+
+<!-- Attach screenshot here -->
+
+<img width="836" height="117" alt="image" src="https://github.com/user-attachments/assets/0cbc83b0-9f75-486e-a6cf-f4a337dd48b5" />
+
+
+
+---
+
+## 6. `touch` Command
+
+**Purpose:** Create a file.
+
+**Command:**
+
+```bash
+touch <file_name>
+```
+
+**Example:**
+
+```bash
+touch sample.txt
+```
+
+**Output:**
+
+<!-- Attach screenshot here -->
+
+<img width="830" height="125" alt="image" src="https://github.com/user-attachments/assets/bb730911-efb2-4cc2-b9cd-c91107ec4cfd" />
+
+
+---
+
+## 7. `cp` Command
+
+**Purpose:** Copy a file.
+
+**Command:**
+
 ```bash
 cp <source_file> <destination_file>
 ```
 
-**Output:**
+**Example:**
 
-### 8. `gedit` Command
-
-`gedit` is a general-purpose text editor used to create and edit text files.
-
-**Syntax:**
 ```bash
-gedit <file_name>
+cp sample.txt sample_copy.txt
 ```
 
 **Output:**
 
-### 9. `su` Command
+<!-- Attach screenshot here -->
+<img width="825" height="162" alt="image" src="https://github.com/user-attachments/assets/a13cfd11-e549-43d4-8698-354dbb3b154f" />
 
-The `su` command provides administrative access to another user.
 
-**Syntax:**
-```bash
-su <username>
-```
+---
 
-**Output:**
+## 8. `mv` Command
 
-### 10. `mv` Command
+**Purpose:** Move a file.
 
-The `mv` command is used to move a file or directory from one location to another.
+**Command:**
 
-**Syntax:**
 ```bash
 mv <file_name> <directory_path>
 ```
 
-**Output:**
+**Example:**
 
-### 11. `rename` Command
-
-The `rename` command is used to rename files.
-
-**Syntax:**
 ```bash
-rename 's/old-name/new-name/' <files>
+mv sample_copy.txt cloudlab/
 ```
 
 **Output:**
 
-### 12. `head` Command
+<!-- Attach screenshot here -->
 
-The `head` command displays the first 10 lines of a file.
+<img width="1617" height="662" alt="image" src="https://github.com/user-attachments/assets/c758ed76-e932-4d79-a1d3-afda3bdf98d2" />
 
-**Syntax:**
+
+---
+
+## 9. `rm` Command
+
+**Purpose:** Delete a file.
+
+**Command:**
+
 ```bash
-head <file_name>
+rm <file_name>
+```
+
+**Example:**
+
+```bash
+rm sample.txt
 ```
 
 **Output:**
 
-### 13. `tail` Command
+<img width="1655" height="632" alt="image" src="https://github.com/user-attachments/assets/022463f8-b168-4c4d-84e8-ec33fb492f2b" />
 
-The `tail` command displays the last 10 lines of a file.
 
-**Syntax:**
-```bash
-tail <file_name>
-```
 
-**Output:**
 
-### 14. `id` Command
+---
 
-The `id` command displays the user ID (UID) and group ID (GID).
+## 10. `clear` Command
 
-**Syntax:**
-```bash
-id
-```
+**Purpose:** Clear the terminal screen.
 
-**Output:**
+**Command:**
 
-### 15. `grep` Command
-
-The `grep` command is used to search for a pattern within files.
-
-**Syntax:**
-```bash
-command | grep <search_word>
-```
-
-**Output:**
-
-### 16. `tr` Command
-
-The `tr` command is used to translate or delete characters.
-
-**Syntax:**
-```bash
-command | tr <old> <new>
-```
-
-**Output:**
-
-### 17. `chmod` Command
-
-The `chmod` command is used to change the access mode (permissions) of a file.
-
-**Syntax:**
-```bash
-chmod <options> <permissions> <file_name>
-```
-
-**Output:**
-
-### 18. `tar` Command
-
-The `tar` command is used to create or extract archive files.
-
-**Syntax:**
-```bash
-tar [options] [archive-file] [files_to_archive]
-```
-
-**Output:**
-
-### 19. `chown` Command
-
-The `chown` command is used to change the ownership of a file.
-
-**Syntax:**
-```bash
-chown <owner_name> <file_name>
-```
-
-**Output:**
-
-### 20. `make` Command
-
-The `make` command is used to build and maintain groups of programs.
-
-**Syntax:**
-```bash
-make [-f makefile] [options] [targets]
-```
-
-**Output:**
-
-### 21. `ifconfig` Command
-
-The `ifconfig` command is used to configure network interfaces.
-
-**Syntax:**
-```bash
-ifconfig [options] [interface]
-```
-
-**Output:**
-
-### 22. `chmod 777` Command
-
-The `chmod 777` command gives read, write, and execute permissions to the owner, group, and others.
-
-**Syntax:**
-```bash
-chmod 777 <file_name>
-chmod -R 777 /path/to/file/or/folder
-```
-
-**Output:**
-
-### 23. `host` Command
-
-The `host` command is used to display the IP address for a given domain name.
-
-**Syntax:**
-```bash
-host <domain_name> or <ip_address>
-```
-
-**Output:**
-
-### 24. `gzip` Command
-
-The `gzip` command is used to compress files, replacing the original file with a compressed one with a `.gz` extension.
-
-**Syntax:**
-```bash
-gzip <file1> <file2> <file3>...
-```
-
-**Output:**
-
-### 25. `sort` Command
-
-The `sort` command is used to sort the contents of a file alphabetically.
-
-**Syntax:**
-```bash
-sort <file_name>
-```
-
-**Output:**
-
-### 26. `cal` Command
-
-The `cal` command displays the current month's calendar with the current date highlighted.
-
-**Syntax:**
-```bash
-cal
-```
-
-**Output:**
-
-### 27. `clear` Command
-
-The `clear` command clears the terminal screen.
-
-**Syntax:**
 ```bash
 clear
 ```
 
 **Output:**
 
-### 28. `mail` Command
+<!-- Attach screenshot here -->
 
-The `mail` command is used to send emails from the command line.
+<img width="770" height="63" alt="image" src="https://github.com/user-attachments/assets/644fae9a-914c-4333-b954-9a8bf29ce79a" />
 
-**Syntax:**
+
+---
+
+## 11. `date` Command
+
+**Purpose:** Display the current date and time.
+
+**Command:**
+
 ```bash
-mail
+date
 ```
 
 **Output:**
 
-### 29. `df` Command
+<!-- Attach screenshot here -->
 
-The `df` command displays the disk space usage of file systems.
+<img width="816" height="160" alt="image" src="https://github.com/user-attachments/assets/b5191742-a62d-45c8-a640-62f1b9793a95" />
 
-**Syntax:**
+
+---
+
+## 12. `whoami` Command
+
+**Purpose:** Display the username.
+
+**Command:**
+
 ```bash
-df
+whoami
 ```
 
 **Output:**
 
-### 30. `find` Command
+<img width="550" height="75" alt="image" src="https://github.com/user-attachments/assets/36a680ca-bd01-4e33-9bb9-4e83fcabec69" />
 
-The `find` command is used to search for files in a directory hierarchy.
 
-**Syntax:**
+
+
+---
+
+# Example Execution
+
 ```bash
-find <directory> -name <file_name>
+pwd
+ls
+mkdir cloudlab
+cd cloudlab
+touch sample.txt
+ls
+date
+whoami
 ```
 
-**Output:**
+---
 
-## Result
+# Result
+
+Oracle VirtualBox was installed successfully, Kali Linux was configured successfully, and the basic Linux commands were executed successfully.
